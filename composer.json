@@ -1,0 +1,26 @@
+{
+    "name": "harmony/mouf-module",
+    "type": "library",
+    "description": "This package is an Harmony module for the Symfony 2 PHP framework.",
+    "keywords": ["harmony", "symfony", "module"],
+    "homepage": "http://mouf-php.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Négrier",
+            "email": "d.negrier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.4.0",
+        "harmony/harmony-module-interface": "~1.0",
+        "acclimate/container": "~1.0",
+        "symfony/symfony/http-kernel": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Harmony\\Bundle\\SymfonyBundle\\": "src/Harmony/Bundle/SymfonyBundle/"
+        }
+    }
+}

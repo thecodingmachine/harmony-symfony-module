@@ -1,0 +1,4 @@
+services:
+#    harmony_symfony.example:
+#        class: Harmony\Bundle\SymfonyBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
