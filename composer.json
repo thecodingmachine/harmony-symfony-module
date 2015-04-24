@@ -1,5 +1,5 @@
 {
-    "name": "harmony/mouf-module",
+    "name": "harmony/symfony-module",
     "type": "library",
     "description": "This package is an Harmony module for the Symfony 2 PHP framework.",
     "keywords": ["harmony", "symfony", "module"],

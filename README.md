@@ -1,5 +1,5 @@
-Mouf's Harmony module
-=====================
+Symfony2's Harmony module
+=========================
 
 This package contains a module that connects the Harmony user interface to the Symfony 2 PHP framework.
 
