@@ -25,7 +25,7 @@ class SymfonyContainerExplorer implements ContainerExplorerInterface {
         if (file_exists(__DIR__.'/../../../../generated/servicesMap.php')) {
             $servicesMap = require __DIR__.'/../../../../generated/servicesMap.php';
         } else {
-            $servicesMap = null;
+            $servicesMap = array();
         }
         return new self($container, $servicesMap);
     }
@@ -65,6 +65,6 @@ class SymfonyContainerExplorer implements ContainerExplorerInterface {
                 }
             }
         }
-        return $type;
+        return $services;
     }
 }

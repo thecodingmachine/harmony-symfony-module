@@ -67,4 +67,4 @@ return [
 ];
 ```
 
-You are done!
+You are done! Now, start Harmony. Harmony modules should be able to detect your Symfony services and act accordingly!

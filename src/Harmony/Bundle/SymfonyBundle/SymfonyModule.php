@@ -12,6 +12,7 @@ class SymfonyModule implements HarmonyModuleInterface {
 
     private $kernel;
     private $acclimatedContainer;
+    private $containerExplorer;
 
     /**
      * Creates the module from the Symfony Kernel.
@@ -31,6 +32,7 @@ class SymfonyModule implements HarmonyModuleInterface {
             $this->kernel = new \AppKernel('dev', true);
             $this->kernel->loadClassCache();
         }
+        $this->kernel->boot();
 
         $acclimate = new ContainerAcclimator();
         $this->acclimatedContainer = $acclimate->acclimate($this->kernel->getContainer());
@@ -56,6 +58,9 @@ class SymfonyModule implements HarmonyModuleInterface {
      */
     public function getContainerExplorer()
     {
-        // TODO: Implement getContainerExplorer() method.
+        if ($this->containerExplorer === null) {
+            $this->containerExplorer = SymfonyContainerExplorer::build($this->kernel->getContainer());
+        }
+        return $this->containerExplorer;
     }
 }
